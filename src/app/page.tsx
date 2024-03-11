@@ -1,5 +1,9 @@
-import Image from "next/image";
+import TopBannerVideo from "@/components/TopBannerVideo/TopBannerVideo";
 
 export default function Home() {
-  return <main className="min-h-screen"></main>;
+  return (
+    <main className="min-h-screen flex justify-center">
+      <TopBannerVideo />
+    </main>
+  );
 }
