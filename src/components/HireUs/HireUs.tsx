@@ -14,7 +14,7 @@ const cardData: CardData[] = [
   { id: 4, title: "non similique placeat", description: "magnam soluta aspernatur at nisi ipsum, blanditiis deleniti" },
 ];
 
-const ResponsiveContainer: React.FC = () => {
+const HireUs: React.FC = () => {
   return (
     <div className="container mx-auto px-4">
       <ScrollIntoView>
@@ -31,4 +31,4 @@ const ResponsiveContainer: React.FC = () => {
   );
 };
 
-export default ResponsiveContainer;
+export default HireUs;

@@ -1,5 +1,6 @@
 import HireUs from "@/components/HireUs/HireUs";
 import MissionStatement from "@/components/MissionStatement/MissionStatement";
+import Showreels from "@/components/Showreels/Showreels";
 import TopBannerVideo from "@/components/TopBannerVideo/TopBannerVideo";
 
 export default function Home() {
@@ -8,6 +9,8 @@ export default function Home() {
       <TopBannerVideo />
       <div className="h-20"></div>
       <MissionStatement />
+      <div className="h-20"></div>
+      <Showreels />
       <div className="h-20"></div>
       <HireUs />
       <div className="h-20"></div>
