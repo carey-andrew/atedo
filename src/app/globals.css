@@ -27,6 +27,19 @@ body {
     @apply font-poppins;
 }
 
+h2 {
+  @apply text-4xl tracking-wider mb-6 text-center;
+}
+
+.clipped-text {
+  color: transparent;
+  background-image: url("https://images.pexels.com/photos/73873/star-clusters-rosette-nebula-star-galaxies-73873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-position: center;
+  background-size: cover;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

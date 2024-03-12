@@ -9,7 +9,9 @@ const config: Config = {
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
-        poppins: ["var(--font-poppins)", "sans-serif"]
+        poppins: ["var(--font-poppins)", "sans-serif"],
+        bebasNeue: ["var(--font-bebasNeue)", "sans-serif"],
+        roboto: ["var(--font-roboto)", "sans-serif"],
       },
     },
   },
