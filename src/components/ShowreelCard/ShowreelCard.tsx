@@ -2,12 +2,12 @@ import VideoPlayer from "../VideoPlayer/VideoPlayer";
 
 interface ShowreelCardProps {
   id: number;
-  src: string
+  src: string;
 }
 
 const ShowreelCard: React.FC<ShowreelCardProps> = ({ id, src }) => (
   <div className="flex px-4">
-    <VideoPlayer src={src} />
+    <VideoPlayer src={src} autoplay={false} loop={true} muted={false}/>
   </div>
 );
 

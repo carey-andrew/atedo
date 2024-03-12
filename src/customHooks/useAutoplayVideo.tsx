@@ -16,7 +16,9 @@ const useAutoplayVideo = (): React.RefObject<HTMLVideoElement> => {
             if (!entry.isIntersecting) {
               video.pause();
             } else {
-              video.play();
+              if (video.autoplay) {
+                video.play();
+              }
             }
           });
         },
