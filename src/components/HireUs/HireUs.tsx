@@ -1,5 +1,8 @@
+import React from "react";
 import HireUsCard from "../HireUsCard/HireUsCard";
 import ScrollIntoView from "../scrollIntoView/ScrollIntoView";
+
+
 
 interface CardData {
   id: number;
@@ -8,7 +11,7 @@ interface CardData {
 }
 
 const cardData: CardData[] = [
-  { id: 1, title: "Lorem ipsum dolor sit"!, description: "adipisicing elit. In non similique placeat" },
+  { id: 1, title: "Lorem ipsum dolor sit", description: "adipisicing elit. In non similique placeat" },
   { id: 2, title: "dolor sit, amet", description: "incidunt quas , provident" },
   { id: 3, title: "consectetur adipisicing", description: "ad quibusdam corrupti officiis nam iure? Laudantium" },
   { id: 4, title: "non similique placeat", description: "magnam soluta aspernatur at nisi ipsum, blanditiis deleniti" },
@@ -24,11 +27,10 @@ const HireUs: React.FC = () => {
             {cardData.map((card) => (
               <HireUsCard key={card.id} {...card} />
             ))}
-          </div>
+          </div>    
         </div>
       </ScrollIntoView>
     </div>
-  );
-};
-
+  );  
+}
 export default HireUs;
