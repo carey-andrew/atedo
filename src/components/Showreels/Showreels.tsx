@@ -7,9 +7,9 @@ interface CardData {
 }
 
 const cardData: CardData[] = [
-  { id: 1, src: "/video/showreel1.mp4" },
-  { id: 2, src: "/video/showreel2.mp4" },
-  { id: 3, src: "/video/showreel3.mp4" },
+  // { id: 1, src: "/video/showreel1.mp4" },
+  // { id: 2, src: "/video/showreel2.mp4" },
+  // { id: 3, src: "/video/showreel3.mp4" },
 ];
 
 const Showreels: React.FC = () => {
