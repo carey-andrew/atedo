@@ -1,8 +1,9 @@
 const isDarkMode = () => {
-  if (document.documentElement.classList.contains("dark")) {
+  if (typeof document !== "undefined" && document.documentElement.classList.contains("dark")) {
     return true;
-  } 
+  }
   return false;
 };
 
 export default isDarkMode;
+
