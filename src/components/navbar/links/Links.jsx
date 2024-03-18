@@ -8,8 +8,12 @@ import isDarkMode from "@/functions/isDarkMode";
 
 const links = [
   {
-    // title: "Homepage",
-    // path: "/",
+    title: "Our Work",
+    path: "/",
+  },
+  {
+    title: "Gallery",
+    path: "/gallery",
   },
 ];
 
@@ -23,20 +27,30 @@ const Links = ({ session }) => {
     toggleDarkMode();
   };
 
-  const menuImage = isDarkMode() ? "/menu_dark.png" : "/menu_light.png";
+  // const menuImage = isDarkMode() ? "/menu_dark.png" : "/menu_light.png";
 
   return (
-    <div>
-      <Image className="absolute right-0 mr-4" src={menuImage} alt="menu" width={30} height={30} onClick={() => setOpen((prev) => !prev)} />
-      {open && (
-        <div className="absolute flex top-[60px] right-0 py-6 px-4 flex-col items-end gap-3 z-10 text-primary-light dark:text-primary-dark bg-secondary-light dark:bg-secondary-dark">
-          <button onClick={toggleMode}>{darkMode ? "Dark Theme" : "Light Theme"}</button>
-          {/* {links.map((link) => (
-            <NavLink item={link} key={link.title} />
-          ))} */}
-        </div>
-      )}
+    <div className="flex justify-between items-center w-full">
+      <div className="flex gap-4">
+        {links.map((link) => (
+          <NavLink item={link} key={link.title}></NavLink>
+        ))}
+      </div>
+      <button className="" onClick={toggleMode}>
+        {darkMode ? "Dark" : "Light"}
+      </button>
     </div>
+    // <div>
+    //   <Image className="absolute right-0 mr-4" src={menuImage} alt="menu" width={30} height={30} onClick={() => setOpen((prev) => !prev)} />
+    //   {open && (
+    //     <div className="absolute flex top-[60px] right-0 py-6 px-4 flex-col items-end gap-3 z-10 text-primary-light dark:text-primary-dark bg-secondary-light dark:bg-secondary-dark">
+    //       <button onClick={toggleMode}>{darkMode ? "Dark Theme" : "Light Theme"}</button>
+    //       {/* {links.map((link) => (
+    //         <NavLink item={link} key={link.title} />
+    //       ))} */}
+    //     </div>
+    //   )}
+    // </div>
   );
 };
 
