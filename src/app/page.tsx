@@ -4,6 +4,7 @@ import Showreels from "@/components/Showreels/Showreels";
 import Navbar from "@/components/navbar/Navbar";
 import TopBannerVideo from "@/components/TopBannerVideo/TopBannerVideo";
 import ClientLogos from "@/components/ClientCard/ClientCard";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <ClientLogos />
         <div className="h-20"></div>
       </main>
+      <Footer />
     </>
   );
 }
