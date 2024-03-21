@@ -10,42 +10,58 @@ const Footer = () => {
   return (
     <footer className="footer mx-auto px-4">
       <ScrollIntoView>
-        <h2 className="flex align-left text-3xl font-bold text-black mt-8 mb-4" 
-        >READY TO GET IN TOUCH?</h2>
-        <section className="links border-x-indigo-500">
-          <a href="mailto: />" >Contact Us</a>
-        </section>
-        <section>
-          <a href="https://www.instagram.com/">
-            <Image
-              src="/icons/instagram-light.png"
-              alt="Instagram"
-              width={30}
-              height={30}
-            />
+        <h2 className="text-3xl font-bold mt-8 mb-4">
+          READY TO GET IN TOUCH?
+        </h2>
+        <h3 className="text-3xl font-bold mt-8 mb-4 text-center">
+          <a
+            href="/"
+            className="text-2xl font-bold border-b border-red-500 border-b-4"
+          >
+            CONTACT US
           </a>
-          <a href="https://www.tiktok.com/">
-            <Image
-              src="/icons/tiktok-light.png"
-              alt="TikTok"
-              width={30}
-              height={30}
-            />
-          </a>
-          <a href="mailto: />">
+        </h3>
+
+        <section className="flex justify-center items-center space-x-3">
+          <a href="mailto:">
             <Image
               src="/icons/email-light.png"
               alt="Email"
-              width={30}
-              height={30}
+              width={50}
+              height={50}
+              className="m-auto p-2"
+            />
+          </a>
+          <a href="https://www.instagram.com/" className="m-auto p-2">
+            <Image
+              src="/icons/instagram-light.png"
+              alt="Instagram"
+              width={50}
+              height={50}
+            />
+          </a>
+          <a href="https://www.tiktok.com/" className="m-auto p-2">
+            <Image
+              src="/icons/tiktok-light.png"
+              alt="TikTok"
+              width={50}
+              height={50}
             />
           </a>
         </section>
-        <section className="flex space-x-2 justify-center">
-          <a href="#home">Home</a>
-          <a href="#projects">Projects</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#about">About</a>
+        <section className="flex flex-row items-center justify-center text-xl space-x-10 mt-8 pb-8">
+          <a href="/" className="my-2">
+            Home
+          </a>
+          <a href="#showreels" className="my-2">
+            Projects
+          </a>
+          <a href="/gallery" className="my-2">
+            Gallery
+          </a>
+          <a href="#about" className="my-2">
+            About
+          </a>
         </section>
       </ScrollIntoView>
     </footer>
