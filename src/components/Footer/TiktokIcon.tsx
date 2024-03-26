@@ -7,7 +7,7 @@ const TiktokIcon = () => {
   const { theme } = useTheme();
 
   return (
-    <a href="https://www.tiktok.com/" className="p-2">
+    <a href="https://www.tiktok.com/@jamescourtenay" className="p-2">
       <Image src={theme == "light" ? "/icons/tiktok-dark-df.png" : "/icons/tiktok-light-df.png"} alt="Tiktok" width={50} height={50} />
     </a>
   );
