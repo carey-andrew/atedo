@@ -6,6 +6,7 @@ import TopBannerVideo from "@/components/TopBannerVideo/TopBannerVideo";
 import ClientLogos from "@/components/ClientCard/ClientCard";
 import Footer from "@/components/Footer/Footer";
 import { ThemeProvider } from "@/Contexts/ThemeContext";
+import InstagramGallery from "@/components/InstagramGallery/InstagramGallery";
 
 export default function Home() {
   return (
@@ -18,6 +19,8 @@ export default function Home() {
           <MissionStatement />
           <div className="h-20"></div>
           <Showreels />
+          <div className="h-20"></div>
+          <InstagramGallery />
           <div className="h-20"></div>
           <HireUs />
           <div className="h-20"></div>
