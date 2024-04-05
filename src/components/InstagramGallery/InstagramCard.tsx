@@ -7,7 +7,7 @@ interface InstagramCardProps {
 
 const InstagramCard: React.FC<InstagramCardProps> = ({ id, media_url }) => (
   <div className="flex px-4">
-    <img src={media_url} alt={id} className="w-[100px]" />
+    <img src={media_url} alt={id} className="w-[309px]" />
   </div>
 );
 
