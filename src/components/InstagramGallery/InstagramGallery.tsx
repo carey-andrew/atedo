@@ -10,7 +10,7 @@ const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,ti
 
 async function fetchData() {
   try {
-    const response = await fetch(url);
+    const response = await fetch(url, {cache: "no-store"});
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
@@ -26,7 +26,7 @@ async function fetchData() {
 }
 const InstagramGallery = async () => {
   const instagramData = await fetchData();
-  console.log("instagramData: ", instagramData.data[0].media_url);
+  console.log("instagramData3: ", instagramData);
 
   // const Gallery: React.FC = () => {
     return (
