@@ -5,28 +5,22 @@
 import React from "react";
 import ScrollIntoView from "@/components/scrollIntoView/ScrollIntoView";
 // import EmailIcon from "./EmailIcon";
-import ContactCard from "../ContactUs/ContactForm";
+import ContactForm from "./ContactForm";
 
 const Footer = () => {
   return (
-    <footer className="footer mx-auto px-4">
+    <div className="footer mx-auto px-4">
       <ScrollIntoView>
-        <section className="flex flex-row items-center justify-center text-xl space-x-10 mt-8 pb-8">
-          <a href="/" className="my-2">
-            Home
+        <h2 className="text-3xl font-bold mt-4 mb-4">READY TO GET IN TOUCH?</h2>
+
+        <h3 className="text-3xl font-bold mt-8 mb-4 text-center">
+          <a href="/" className="text-2xl font-bold border-red-500 border-b-4">
+            CONTACT US
           </a>
-          <a href="#showreels" className="my-2">
-            Projects
-          </a>
-          <a href="/gallery" className="my-2">
-            Gallery
-          </a>
-          <a href="#about" className="my-2">
-            About
-          </a>
-        </section>
+        </h3>
+        <ContactForm />
       </ScrollIntoView>
-    </footer>
+    </div>
   );
 };
 

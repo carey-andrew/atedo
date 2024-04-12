@@ -26,7 +26,7 @@ async function fetchData() {
 }
 const InstagramGallery = async () => {
   const instagramData = await fetchData();
-  console.log("instagramData3: ", instagramData);
+  // console.log("instagramData3: ", instagramData);
 
   // const Gallery: React.FC = () => {
     return (
