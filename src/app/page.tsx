@@ -23,8 +23,8 @@ export default function Home() {
           <Showreels />
           <div className="h-20"></div>
           <HireUs />
-          <div className="h-20"></div>
-          <InstagramGallery />
+          {/* <div className="h-20"></div>
+          <InstagramGallery /> */}
           <div className="h-20"></div>
           <ClientLogos />
           <div className="h-20"></div>
