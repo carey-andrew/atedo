@@ -1,10 +1,6 @@
 {
   "compilerOptions": {
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
@@ -23,21 +19,9 @@
       }
     ],
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+      "@/*": ["./src/*"]
     }
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "src/components/TopBannerVideo/TopBannerVideo.tsx",
-    "src/components/HireUs/HireUs.tsx",
-    "src/components/MissionStatement/MissionStatement.tsx"
-, "src/components/navbar/links/ToggleThemeButton.tsx"  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/TopBannerVideo/TopBannerVideo.tsx", "src/components/HireUs/HireUs.tsx", "src/components/MissionStatement/MissionStatement.tsx", "src/components/navbar/links/ToggleThemeButton.tsx", "src/components/ContactUs/ContactForm.tsx"],
+  "exclude": ["node_modules"]
 }

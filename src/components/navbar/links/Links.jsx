@@ -6,10 +6,10 @@ const links = [
     title: "Our Work",
     path: "/",
   },
-  {
-    title: "Gallery",
-    path: "/gallery",
-  },
+  // {
+  //   title: "Gallery",
+  //   path: "/gallery",
+  // },
 ];
 
 const Links = ({ session }) => {
