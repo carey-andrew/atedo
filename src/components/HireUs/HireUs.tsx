@@ -1,8 +1,8 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import HireUsCard from "../HireUsCard/HireUsCard";
 import ScrollIntoView from "../scrollIntoView/ScrollIntoView";
-import { useGSAP } from "@/components/gsap/gsap";
+// import { useGSAP } from "@/components/gsap/gsap";
 
 interface CardData {
   id: number;
@@ -36,7 +36,7 @@ const HireUs: React.FC = () => {
 
   const descriptionRef = useRef<HTMLDivElement>(null);
 
-  const { contextSafe } = useGSAP({ scope: descriptionRef });
+  // const { contextSafe } = useGSAP({ scope: descriptionRef });
 
   
   const handleClick = (id: number) => {
