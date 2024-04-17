@@ -17,7 +17,7 @@ export default function Home() {
         <Navbar />
         <main className="flex min-h-screenjustify-center flex-col items-center">
           <TopBannerVideo />
-          <div className="h-20"></div>
+          <div className="h-10 sm:h-20"></div>
           <MissionStatement />
           <div className="h-20"></div>
           <Showreels />
