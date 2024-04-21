@@ -34,7 +34,7 @@ const clientLogos: ClientLogo[] = [
   },
 ];
 
-const defaultWidth = 200; // Set your desired default width
+const defaultWidth = 500; // Set your desired default width
 
 const ClientLogo: React.FC = () => {
   return (
@@ -42,9 +42,9 @@ const ClientLogo: React.FC = () => {
       <ScrollIntoView>
         <h2>OUR CLIENTS</h2>
         <div className="flex justify-center w-[80%] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {clientLogos.map((client) => (
-              <ClientCard key={client.id} {...client} width={client.width || defaultWidth} />
+              <ClientCard key={client.id} {...client} width={defaultWidth} />
             ))}
           </div>
         </div>
@@ -62,4 +62,3 @@ const ClientCard: React.FC<ClientLogo> = ({ id, imgSrc, altText, width }) => {
 };
 
 export default ClientLogo;
-
