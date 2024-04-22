@@ -1,5 +1,5 @@
 import ShowreelCard from "../ShowreelCard/ShowreelCard";
-import ScrollIntoView from "../scrollIntoView/ScrollIntoView";
+import ScrollIntoView from "../../animations/scrollIntoView/ScrollIntoView";
 
 interface CardData {
   id: number;

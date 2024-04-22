@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, Dispatch, SetStateAction, useRef } from "react";
 import HireUsTitle from "./HireUsTitle";
-import ScrollIntoView from "../scrollIntoView/ScrollIntoView";
+import ScrollIntoView from "../../animations/scrollIntoView/ScrollIntoView";
 import HireUsDetail from "./HireUsDetail";
 
 interface CardData {
@@ -50,12 +50,7 @@ const HireUs: React.FC = () => {
               <HireUsTitle key={card.id} onShowDetail={handleShowDetail} activeId={activeId} {...card} />
             ))}
           </div>
-          {cardData.map(
-            (card) =>
-              card.id == activeId && (
-                  <HireUsDetail key={card.id} {...card} />
-              )
-          )}
+          {cardData.map((card) => card.id == activeId && <HireUsDetail key={card.id} {...card} />)}
         </section>
       </ScrollIntoView>
     </>

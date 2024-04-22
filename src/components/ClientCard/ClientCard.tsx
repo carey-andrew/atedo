@@ -1,5 +1,5 @@
 import React from "react";
-import ScrollIntoView from "../scrollIntoView/ScrollIntoView";
+import ScrollIntoView from "../../animations/scrollIntoView/ScrollIntoView";
 import Image from "next/image";
 import "../../../public/client_logo.png";
 
