@@ -1,0 +1,29 @@
+name: carey-andrew/atedo
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Schedule to run daily at midnight
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Git
+        run: |
+          git config --global user.name 'carey-andrew'
+          git config --global user.email 'carey_andrew@hotmail.com'
+
+      - name: Fetch upstream changes
+        run: |
+          git remote add upstream https://github.com/Dug-F/atedo
+          git fetch upstream
+
+      - name: Merge upstream changes
+        run: |
+          git merge upstream/main
+          git push origin main
+
