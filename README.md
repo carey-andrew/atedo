@@ -1,5 +1,5 @@
 <p align="center"> 
-Atedo is a portfolio site made in collaboration with a stakeholder. In the long term we are exploring adding a video gallery page to display and market the stakeholders assets.
+Atedo is a portfolio site made in collaboration with a stakeholder. In the long term we are exploring adding a video gallery page to display and market the stakeholders assets. It is still in development and we are awaiting the final wording, font choices and client logos from our stakeholder.
     <br> 
     <br>
  <img src="https://github.com/carey-andrew/atedo/assets/137008062/478fabd4-74f7-4ac7-95d5-5e89e61b6b6c" width="250" height="150">
