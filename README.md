@@ -2,6 +2,9 @@
 Atedo is a portfolio site made in collaboration with a stakeholder. In the long term we are exploring adding a video gallery page to display and market the stakeholders assets.
     <br> 
     <br>
+![Image](https://github.com/carey-andrew/atedo/assets/137008062/c6487352-9d0a-4a95-8540-3c5d54e5c9ba)
+
+
  
 </p>
 
@@ -47,7 +50,7 @@ Our next sprint goal, would be to start on login and authentication. This is imp
 
 ## 🏁 Visit Our Website <a name = "vist_our_website"></a>
 
-You can visit our app here -> <a href="https://atedo.vercel.app/">Atedo.</a>
+You can visit our website here -> <a href="https://atedo.vercel.app/">Atedo.</a>
 
 ## ⛏️ Tech Stack <a name = "tech_stack"></a>
 
