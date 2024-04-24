@@ -2,7 +2,7 @@
 Atedo is a portfolio site made in collaboration with a stakeholder. In the long term we are exploring adding a video gallery page to display and market the stakeholders assets.
     <br> 
     <br>
- <img src="["C:\Users\carey\OneDrive\Pictures\Screenshots\Screenshot 2024-04-24 104830.png"]" width="150" height="150">
+ <img src="https://github.com/carey-andrew/atedo/assets/137008062/478fabd4-74f7-4ac7-95d5-5e89e61b6b6c" width="150" height="150">
 
 
 
