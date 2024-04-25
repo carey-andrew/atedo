@@ -7,6 +7,11 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -euxo pipefail
+        # Use Node.js 20
+        working-directory: '20'
 
     steps:
       - name: Checkout code
@@ -26,4 +31,5 @@ jobs:
         run: |
           git merge upstream/main
           git push origin main
+
 
