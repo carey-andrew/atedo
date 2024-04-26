@@ -17,21 +17,21 @@ export default function Home() {
         <Navbar />
         <main className="flex min-h-screenjustify-center flex-col items-center">
           <TopBannerVideo />
-          <div className="h-20"></div>
+          <div className="h-10 sm:h-20"></div>
           <MissionStatement />
-          <div className="h-20"></div>
+          <div className="h-10 sm:h-20"></div>
           <Showreels />
-          <div className="h-20"></div>
+          <div className="h-10 sm:h-20"></div>
           <HireUs />
           {/* <div className="h-20"></div>
           <InstagramGallery /> */}
-          <div className="h-20"></div>
+          <div className="h-10 sm:h-20"></div>
           <ClientLogos />
-          <div className="h-20"></div>
+          <div className="h-10 sm:h-20"></div>
           <FollowUs />
-          <div className="h-20"></div>
+          <div className="h-10 sm:h-20"></div>
           <ContactUs />
-          <div className="h-20"></div>
+          <div className="h-10 sm:h-20"></div>
         </main>
         <Footer />
       </ThemeProvider>

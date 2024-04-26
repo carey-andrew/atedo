@@ -9,8 +9,8 @@ import TiktokIcon from "../Footer/TiktokIcon";
 
 const Footer = () => {
   return (
-    <div className="footer mx-auto px-4">
-      <ScrollIntoView>
+    <div className="mx-auto px-4">
+        {/* <ScrollIntoView> */}
         <h3 className="text-3xl font-bold mt-8 mb-4 text-center">
           <a href="/" className="text-2xl font-bolD">
             FOLLOW US
@@ -20,8 +20,8 @@ const Footer = () => {
           <InstagramIcon />
           <TiktokIcon />
         </section>
-      </ScrollIntoView>
-    </div>
+    {/* </ScrollIntoView> */}
+      </div>
   );
 };
 
