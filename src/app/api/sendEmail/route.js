@@ -16,6 +16,8 @@ export const POST = async (request) => {
         <p style="margin: 0;">${email}</p>
         <h2 style="margin-bottom: 0;">Phone</h2>
         <p style="margin: 0;">${phone}</p>
+        <h2 style="margin-bottom: 0;">Company</h2>
+        <p style="margin: 0;">${company}</p>
         <h2 style="margin-bottom: 0;">Message</h2>
         <p style="margin: 0;">${message}</p>
         `;

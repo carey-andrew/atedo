@@ -3,7 +3,7 @@
 // include a quick link back to top of page called home, a link to the projects section, where the videos are, a gallery link and an about section
 
 import React from "react";
-import ScrollIntoView from "@/components/scrollIntoView/ScrollIntoView";
+import ScrollIntoView from "@/animations/scrollIntoView/ScrollIntoView";
 // import EmailIcon from "./EmailIcon";
 import ContactCard from "../ContactUs/ContactForm";
 
