@@ -50,7 +50,7 @@ const HireUs: React.FC = () => {
         </ScrollIntoView>
       </section>
       <ScrollIntoView>
-        <section className="container flex grid-cols-2 justify-center flex-shrink-0 flex-grow-0 w-[375px] md:w-[1200px]">
+        <section className="container flex grid-cols-2 justify-center flex-shrink-0 flex-grow-0 w-[375px] md:w-[1200px] items-center">
           <div className="grid grid-cols-1 md:grid-cols-1 gap-2 lg:gap-4 cursor-pointer flex-shrink-0 flex-grow-0 w-full md:w-1/2">
             {cardData.map((card) => (
               <HireUsTitle
