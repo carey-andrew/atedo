@@ -9,8 +9,8 @@ import ContactForm from "./ContactForm";
 
 const Footer = () => {
   return (
-    <div className="footer mx-auto px-4">
-      <ScrollIntoView>
+    <div className="mx-auto px-4">
+      {/* <ScrollIntoView> */}
         <h2 className="text-3xl font-bold mt-4 mb-4">READY TO GET IN TOUCH?</h2>
 
         <h3 className="text-3xl font-bold mt-8 mb-4 text-center">
@@ -19,7 +19,7 @@ const Footer = () => {
           </a>
         </h3>
         <ContactForm />
-      </ScrollIntoView>
+      {/* </ScrollIntoView> */}
     </div>
   );
 };

@@ -16,7 +16,11 @@ const cardData: CardData[] = [
     title: "Lorem ipsum dolor sit",
     description: "adipisicing elit. In non similique placeat",
   },
-  { id: "2", title: "dolor sit, amet", description: "incidunt quas , provident" },
+  {
+    id: "2",
+    title: "dolor sit, amet",
+    description: "incidunt quas , provident",
+  },
   {
     id: "3",
     title: "consectetur adipisicing",
@@ -40,17 +44,29 @@ const HireUs: React.FC = () => {
     <>
       <section className="container flex px-4 justify-center">
         <ScrollIntoView>
-          <h2 className="border-red-500 border-b-4 w-300">YOU SHOULD HIRE US BECAUSE</h2>
+          <h2 className="border-red-500 border-b-4 w-300">
+            YOU SHOULD HIRE US BECAUSE
+          </h2>
         </ScrollIntoView>
       </section>
       <ScrollIntoView>
-        <section className="container flex grid-cols-2 justify-center flex-shrink-0 flex-grow-0 w-[1200px]">
-          <div className="grid grid-cols-1 md:grid-cols-1 gap-2 lg:gap-4 cursor-pointer flex-shrink-0 flex-grow-0 w-1/2">
+        <section className="container flex grid-cols-2 justify-center flex-shrink-0 flex-grow-0 w-[375px] md:w-[1200px] items-center">
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-2 lg:gap-4 cursor-pointer flex-shrink-0 flex-grow-0 w-full md:w-1/2">
             {cardData.map((card) => (
-              <HireUsTitle key={card.id} onShowDetail={handleShowDetail} activeId={activeId} {...card} />
+              <HireUsTitle
+                key={card.id}
+                onShowDetail={handleShowDetail}
+                activeId={activeId}
+                {...card}
+              />
             ))}
           </div>
-          {cardData.map((card) => card.id == activeId && <HireUsDetail key={card.id} {...card} />)}
+          <div className="hidden sm:block">
+            {cardData.map(
+              (card) =>
+                card.id == activeId && <HireUsDetail key={card.id} {...card} />
+            )}
+          </div>
         </section>
       </ScrollIntoView>
     </>

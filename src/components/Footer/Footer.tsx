@@ -10,6 +10,7 @@ import ContactCard from "../ContactUs/ContactForm";
 const Footer = () => {
   return (
     <footer className="footer flex items-center justify-center mx-auto px-4">
+    <footer className="footer flex items-center justify-center mx-auto px-4">
       <ScrollIntoView>
         <section className="grid grid-cols-1  sm:grid-cols-4 sm:gap-y-4 align-middle text-center gap-y-4 gap-x-0 sm:gap-x-6 items-center text-xl border-none p-8">
           <a href="/" className="text-center">Home</a>
