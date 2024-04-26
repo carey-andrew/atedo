@@ -61,7 +61,7 @@ const HireUs: React.FC = () => {
               />
             ))}
           </div>
-          <div className="hidden sm:block">
+          <div className="hidden sm:block w-full">
             {cardData.map(
               (card) =>
                 card.id == activeId && <HireUsDetail key={card.id} {...card} />
