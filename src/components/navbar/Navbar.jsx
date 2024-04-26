@@ -1,7 +1,7 @@
 "use client";
 
 import Links from "./links/Links";
-import { gsap } from "@/components/gsap/gsap";
+import { gsap } from "@/animations/gsap/gsap";
 import { useEffect } from "react";
 import toggleDarkMode from "@/functions/toggleDarkMode";
 import { useTheme } from "@/Contexts/ThemeContext";

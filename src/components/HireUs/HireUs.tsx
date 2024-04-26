@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, Dispatch, SetStateAction, useRef } from "react";
 import HireUsTitle from "./HireUsTitle";
-import ScrollIntoView from "../scrollIntoView/ScrollIntoView";
+import ScrollIntoView from "../../animations/scrollIntoView/ScrollIntoView";
 import HireUsDetail from "./HireUsDetail";
 
 interface CardData {

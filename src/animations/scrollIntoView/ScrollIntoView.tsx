@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, ReactNode } from "react";
-import { gsap } from "@/components/gsap/gsap";
+import { gsap } from "@/animations/gsap/gsap";
 
 interface ScrollIntoViewProps {
   children: ReactNode;

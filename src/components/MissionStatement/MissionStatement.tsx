@@ -1,4 +1,4 @@
-import ScrollIntoView from "../scrollIntoView/ScrollIntoView";
+import ScrollIntoView from "../../animations/scrollIntoView/ScrollIntoView";
 
 const MissionStatement = () => {
   return (
