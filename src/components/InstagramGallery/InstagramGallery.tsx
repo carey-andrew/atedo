@@ -35,7 +35,7 @@ const InstagramGallery = async () => {
         <h2>INSTAGRAM</h2>
         <div className="flex justify-center w-[80%] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3  md:grid-cols-2 gap-0.5">
-            {instagramData.data.map((card: InstagramData) => (
+            {instagramData?.data && instagramData.data.map((card: InstagramData) => (
               <InstagramCard key={card.id} {...card} />
             ))}
           </div>

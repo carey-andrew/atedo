@@ -37,7 +37,7 @@ const Navbar = () => {
       }
       tl.kill();
     };
-  }, []);
+  }, [toggleTheme]);
 
   return (
     // <div className="flex justify-end absolute h-[30px] w-full pt-4 pr-4">
