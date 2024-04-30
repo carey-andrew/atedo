@@ -1,31 +1,25 @@
 name: Sync and merge
+
 on:
-    workflow_dispatch:
-    schedule:
+  workflow_dispatch:
+  schedule:
     - cron: '0 0 * * *'
 
 jobs:
-    sync:
-        runs-on: ubuntu-latest
+  sync:
+    runs-on: ubuntu-latest
 
-        steps:
-          - uses: actions/checkout@v4
-          - name: sync and merge upstream
-            uses: dabreadman/sync-upstream-repo@v1.0.0.b
-            with:
-    # URL of gitHub public upstream repo
-                upstream_repo: https://github.com/Dug-F/atedo
-    # Branch to merge from upstream (defaults to downstream branch)
-                upstream_branch: main
-    # Branch to merge into downstream
-                downstream_branch: main
-    # GitHub Bot token
-                
-    # Git fetch arguments
-                
-    # Git merge arguments 
-    # Git push arguments
-                
+    steps:
+      - uses: actions/checkout@v4
+      - name: Upstream Sync
+        uses: aormsby/Fork-Sync-With-Upstream-action@v3.4.1
+        with:
+          target_sync_branch: main
+          upstream_sync_repo: https://github.com/Dug-F/atedo
+          upstream_sync_branch: main
+
+  
+          
     # Toggle to spawn `sync-upstream-repo` with time logs
                
           
