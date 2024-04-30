@@ -1,43 +1,35 @@
 name: carey-andrew/atedo
+on: 
+schedule:
+    - cron: '0 0 * * * *'
+          
+  # You may pin to the exact commit or the version.
+  # uses: Swisyn/fork-sync-with-upstream-action@26ad66dd3b229865edc3fc75021e1fd27fc1b25e
+uses: Dug-F/atedo
+  with:
+    # Branch receiving updates from the upstream repo, e.g. => main, master, prod
+    target_sync_branch: main
+    # Input for passing secrets.GITHUB_TOKEN when disabling persistent auth in the checkout step
+    # Domain name to be used in target repo URL.
+    target_repo_domain: github.com/Dug-F/atedo
+    # Token for accessing the remote repo through HTTPS authentication
+    # Upstream repository, e.g. => aormsby/Fork-Sync-With-Upstream-action
+    upstream_sync_repo: carey-andrew/atedo
+    # Domain name to be used in upstream repo URL.
+    upstream_sync_repo_domain: github.com/carey-andrew/atedo
+    # Branch to sync from, e.g. => main, master, dev
+    upstream_sync_branch: main 
+    # Any extra args to pass to `git checkout` on the source branch, e.g. --recurse-submodules :: default = ""
+    # Git user credentials for sigining commit, (set to "null" for no config)
+    git_config_user: carey-andrew
+    # Git email credentials for sigining commit (set to "null" for no config)
+    git_config_email: carey-andrew@hotmail.com
+    # Git config for "pull.rebase" settings, usually recommend false for this action (set to "null" for no config)
+    git_config_pull_rebase: false
+    # If set to 'true', runs verification test on all inputs and any testable actions that use them
+    test_mode: false
+    # Length of time used when fetching shallow repo data, should match how often you perform a sync
+          
 
-on:
-  schedule:
-    - cron:  '0 0 * * 1,3,5'
-    # scheduled at Midnight Mon, wed, fri
 
-  workflow_dispatch:  # click the button on Github repo!
-
-
-jobs:
-  sync_with_upstream:
-    runs-on: ubuntu-latest
-    name: Sync main with upstream latest
-
-    steps:
-    # Step 1: run a standard checkout action, provided by github
-    - name: Checkout main
-      uses: actions/checkout@v2
-      with:
-        ref: main
-        
-
-    # Step 2: run this sync action - specify the upstream repo, upstream branch to sync with, and target sync branch
-    - name: Pull (Fast-Forward) upstream changes
-      id: sync
-      uses: Dug-F/Fork-Sync-With-Upstream-action@v2.1
-      with:
-        upstream_repository: Dug-F/atedo
-        upstream_branch: main
-        target_branch: main
-        
-
-    # Step 3: Display a message if 'sync' step had new commits (simple test)
-    - name: Check for new commits
-      if: steps.sync.outputs.has_new_commits
-      run: echo "There were new commits."
-
-    # Step 4: Print a helpful timestamp for your records (not required, just nice)
-    - name: Timestamp
-      run: date
-       
 
