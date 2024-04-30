@@ -1,7 +1,7 @@
 "use client";
 
 import Links from "./links/Links";
-import { gsap } from "@/components/gsap/gsap";
+import { gsap } from "@/animations/gsap/gsap";
 import { useEffect } from "react";
 import toggleDarkMode from "@/functions/toggleDarkMode";
 import { useTheme } from "@/Contexts/ThemeContext";
@@ -41,7 +41,7 @@ const Navbar = () => {
 
   return (
     // <div className="flex justify-end absolute h-[30px] w-full pt-4 pr-4">
-    <div className="flex h-[50px] sticky top-0 z-10 align-center bg-secondary-dark dark:bg-secondary-light text-primary-dark dark:text-primary-light p-3">
+    <div className="flex h-[50px] w-full sticky top-0 z-10 align-center bg-secondary-dark dark:bg-secondary-light text-primary-dark dark:text-primary-light p-3">
       <Links />
     </div>
   );

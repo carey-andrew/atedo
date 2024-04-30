@@ -1,4 +1,4 @@
-import ScrollIntoView from "../scrollIntoView/ScrollIntoView";
+import ScrollIntoView from "../../animations/scrollIntoView/ScrollIntoView";
 import InstagramCard from "./InstagramCard";
 
 interface InstagramData {
@@ -10,7 +10,7 @@ const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,ti
 
 async function fetchData() {
   try {
-    const response = await fetch(url, {cache: "no-store"});
+    const response = await fetch(url, { cache: "no-store" });
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
@@ -29,21 +29,21 @@ const InstagramGallery = async () => {
   // console.log("instagramData3: ", instagramData);
 
   // const Gallery: React.FC = () => {
-    return (
-      <div id="instagram" className="container mx-auto px-4">
-        <ScrollIntoView>
-          <h2>INSTAGRAM</h2>
-          <div className="flex justify-center w-[80%] mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-3  md:grid-cols-2 gap-0.5">
-              {instagramData.data.map((card: InstagramData) => (
-                <InstagramCard key={card.id} {...card} />
-              ))}
-            </div>
+  return (
+    <div id="instagram" className="container mx-auto px-4">
+      <ScrollIntoView>
+        <h2>INSTAGRAM</h2>
+        <div className="flex justify-center w-[80%] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3  md:grid-cols-2 gap-0.5">
+            {instagramData?.data && instagramData.data.map((card: InstagramData) => (
+              <InstagramCard key={card.id} {...card} />
+            ))}
           </div>
-        </ScrollIntoView>
-      </div>
-    );
-  };
+        </div>
+      </ScrollIntoView>
+    </div>
+  );
+};
 // };
 
 export default InstagramGallery;

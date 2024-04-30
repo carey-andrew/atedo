@@ -9,12 +9,7 @@ interface ClientLogoCardProps {
   width?: number;
 }
 
-const ClientLogoCard: React.FC<ClientLogoCardProps> = ({
-  id,
-  imgSrc,
-  altText,
-  width = 100,
-}) => { 
+const ClientLogoCard: React.FC<ClientLogoCardProps> = ({ id, imgSrc, altText, width = 100 }) => {
   return (
     <div className="client-logo-card">
       <Image
