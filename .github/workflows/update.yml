@@ -2,34 +2,42 @@ name: carey-andrew/atedo
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Schedule to run daily at midnight
+    - cron:  '0 0 * * 1,3,5'
+    # scheduled at Midnight Mon, wed, fri
+
+  workflow_dispatch:  # click the button on Github repo!
+
 
 jobs:
-  update:
+  sync_with_upstream:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash -euxo pipefail
-        # Use Node.js 20
-        working-directory: '20'
+    name: Sync main with upstream latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    # Step 1: run a standard checkout action, provided by github
+    - name: Checkout main
+      uses: actions/checkout@v2
+      with:
+        ref: main
+        
 
-      - name: Set up Git
-        run: |
-          git config --global user.name 'carey-andrew'
-          git config --global user.email 'carey_andrew@hotmail.com'
+    # Step 2: run this sync action - specify the upstream repo, upstream branch to sync with, and target sync branch
+    - name: Pull (Fast-Forward) upstream changes
+      id: sync
+      uses: Dug-F/Fork-Sync-With-Upstream-action@v2.1
+      with:
+        upstream_repository: Dug-F/atedo
+        upstream_branch: main
+        target_branch: main
+        
 
-      - name: Fetch upstream changes
-        run: |
-          git remote add upstream https://github.com/Dug-F/atedo
-          git fetch upstream
+    # Step 3: Display a message if 'sync' step had new commits (simple test)
+    - name: Check for new commits
+      if: steps.sync.outputs.has_new_commits
+      run: echo "There were new commits."
 
-      - name: Merge upstream changes
-        run: |
-          git merge --allow-unrelated-histories upstream/main
-          git push origin main
-
+    # Step 4: Print a helpful timestamp for your records (not required, just nice)
+    - name: Timestamp
+      run: date
+       
 
