@@ -1,35 +1,32 @@
-name: carey-andrew/atedo
-on: 
-schedule:
-    - cron: '0 0 * * * *'
-          
-  # You may pin to the exact commit or the version.
-  # uses: Swisyn/fork-sync-with-upstream-action@26ad66dd3b229865edc3fc75021e1fd27fc1b25e
-uses: Dug-F/atedo
-  with:
-    # Branch receiving updates from the upstream repo, e.g. => main, master, prod
-    target_sync_branch: main
-    # Input for passing secrets.GITHUB_TOKEN when disabling persistent auth in the checkout step
-    # Domain name to be used in target repo URL.
-    target_repo_domain: github.com/Dug-F/atedo
-    # Token for accessing the remote repo through HTTPS authentication
-    # Upstream repository, e.g. => aormsby/Fork-Sync-With-Upstream-action
-    upstream_sync_repo: carey-andrew/atedo
-    # Domain name to be used in upstream repo URL.
-    upstream_sync_repo_domain: github.com/carey-andrew/atedo
-    # Branch to sync from, e.g. => main, master, dev
-    upstream_sync_branch: main 
-    # Any extra args to pass to `git checkout` on the source branch, e.g. --recurse-submodules :: default = ""
-    # Git user credentials for sigining commit, (set to "null" for no config)
-    git_config_user: carey-andrew
-    # Git email credentials for sigining commit (set to "null" for no config)
-    git_config_email: carey-andrew@hotmail.com
-    # Git config for "pull.rebase" settings, usually recommend false for this action (set to "null" for no config)
-    git_config_pull_rebase: false
-    # If set to 'true', runs verification test on all inputs and any testable actions that use them
-    test_mode: false
-    # Length of time used when fetching shallow repo data, should match how often you perform a sync
-          
+name: Sync and merge
+on:
+    workflow_dispatch:
+    schedule:
+    - cron: '0 0 * * *'
 
+jobs:
+    sync:
+        runs-on: ubuntu-latest
 
+        steps:
+          - uses: actions/checkout@v2
+          - name: sync and merge upstream
+            uses: dabreadman/sync-upstream-repo@v1.0.0.b
+            with:
+    # URL of gitHub public upstream repo
+                upstream_repo: https://github.com/Dug-F/atedo
+    # Branch to merge from upstream (defaults to downstream branch)
+                upstream_branch: main
+    # Branch to merge into downstream
+                downstream_branch: main
+    # GitHub Bot token
+                
+    # Git fetch arguments
+                
+    # Git merge arguments 
+    # Git push arguments
+                
+    # Toggle to spawn `sync-upstream-repo` with time logs
+               
+          
 
