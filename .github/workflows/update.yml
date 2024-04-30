@@ -9,7 +9,7 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-          - uses: actions/checkout@v2
+          - uses: actions/checkout@v4
           - name: sync and merge upstream
             uses: dabreadman/sync-upstream-repo@v1.0.0.b
             with:
